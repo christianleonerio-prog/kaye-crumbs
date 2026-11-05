@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaye Crumbs - Goodness in Every Bite</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#3B1E18',       /* Deep Chocolate Brown */
+                            cream: '#FAF6F0',      /* Soft Cream Background */
+                            card: '#FFFDF9',       /* Card Background */
+                            accent: '#8B2626',     /* Rich Red */
+                            accentHover: '#6D1E1E',
+                            softYellow: '#F4D068',
+                            muted: '#6C584C'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-cream text-brand-dark font-body antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Navigation -->
+    <header class="bg-brand-cream/90 backdrop-blur-md sticky top-0 z-40 border-b border-[#E8DCCF]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3">
+                <img src="1000084671_a8388b.jpg" alt="Kaye Crumbs Logo" class="h-12 w-12 object-cover rounded-full shadow-sm border border-brand-dark/10" onerror="this.onerror=null; this.src='https://placehold.co/100x100/3B1E18/FFFFFF?text=KC';">
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-2xl text-brand-dark tracking-wide leading-tight">Kaye Crumbs</span>
+                    <span class="text-xs text-brand-accent font-semibold tracking-wider leading-none mt-0.5">goodness in every bite</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-bold text-sm text-brand-dark">
+                <a href="#menu" class="hover:text-brand-accent transition-colors">Menu</a>
+                <a href="#info" class="hover:text-brand-accent transition-colors">Location & Contact</a>
+                <a href="https://www.facebook.com/share/1E4X9dduT8/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#1877F2] text-white px-5 py-2.5 rounded-full hover:bg-blue-700 transition-colors shadow">
+                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                </a>
+            </nav>
+
+            <a href="https://www.facebook.com/share/1E4X9dduT8/" target="_blank" rel="noopener noreferrer" class="md:hidden text-2xl text-[#1877F2] p-2">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section id="home" class="py-12 bg-white border-b border-[#E8DCCF] text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <img src="1000084671_a8388b.jpg" alt="Kaye Crumbs Banner Logo" class="h-28 w-28 mx-auto mb-4 object-cover rounded-full shadow-md border-2 border-brand-accent/20" onerror="this.onerror=null; this.src='https://placehold.co/200x200/3B1E18/FFFFFF?text=Kaye+Crumbs';">
+            <h1 class="font-heading font-bold text-4xl sm:text-5xl text-brand-dark leading-tight mb-2">ON THE MENU</h1>
+            <p class="text-brand-muted text-base sm:text-lg font-medium">Freshly baked chunky cookies & fudgy brownies made with love</p>
+        </div>
+    </section>
+
+    <!-- Order Callout Banner -->
+    <section class="bg-brand-accent text-white py-8 px-4 text-center border-b border-brand-accentHover">
+        <div class="max-w-4xl mx-auto space-y-3">
+            <span class="bg-white/20 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-1">Easy Ordering</span>
+            <h2 class="font-heading font-bold text-2xl sm:text-3xl leading-snug">To make your order call or message</h2>
+            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-2">
+                <a href="tel:09815005182" class="flex items-center gap-2 bg-white text-brand-accent font-bold px-6 py-3 rounded-2xl hover:bg-brand-cream transition-all shadow-md text-base sm:text-lg">
+                    <i class="fa-solid fa-phone"></i> 0981 500 5182
+                </a>
+                <a href="https://www.facebook.com/share/1E4X9dduT8/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#1877F2] text-white font-bold px-6 py-3 rounded-2xl hover:bg-blue-700 transition-all shadow-md text-base sm:text-lg">
+                    <i class="fa-brands fa-facebook-f"></i> Message on Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-brand-accent font-bold tracking-widest text-xs uppercase">Fresh From Our Oven</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark">Our Sweet Treats</h2>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamic Javascript rendering for all 7 flavors -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Location, Contact & Services Section -->
+    <section id="info" class="py-16 bg-white border-t border-[#E8DCCF]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-brand-accent font-bold tracking-widest text-xs uppercase">Visit & Contact Us</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark">Store Information</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Location -->
+                <div class="bg-brand-cream p-8 rounded-3xl border border-[#E8DCCF] text-center space-y-4 shadow-sm flex flex-col items-center justify-between">
+                    <div class="space-y-3">
+                        <div class="w-14 h-14 bg-brand-accent text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark">Address</h3>
+                        <p class="text-sm text-brand-muted font-medium leading-relaxed">NLSA BARANGAY LAGAO GENERAL SANTOS CITY, 9500</p>
+                    </div>
+                    <p class="text-xs text-brand-dark font-bold pt-2 border-t border-brand-dark/10 w-full">General Santos City, Philippines</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="bg-brand-cream p-8 rounded-3xl border border-[#E8DCCF] text-center space-y-4 shadow-sm flex flex-col items-center justify-between">
+                    <div class="space-y-3">
+                        <div class="w-14 h-14 bg-brand-dark text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark">Contact Info</h3>
+                        <p class="text-base font-bold text-brand-dark">0981 500 5182</p>
+                    </div>
+                    <a href="https://www.facebook.com/share/1E4X9dduT8/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-[#1877F2] hover:underline pt-2 border-t border-brand-dark/10 w-full justify-center">
+                        <i class="fa-brands fa-facebook"></i> Kaye Crumbs
+                    </a>
+                </div>
+
+                <!-- Services -->
+                <div class="bg-brand-cream p-8 rounded-3xl border border-[#E8DCCF] text-center space-y-4 shadow-sm flex flex-col items-center justify-between">
+                    <div class="space-y-3">
+                        <div class="w-14 h-14 bg-amber-600 text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark">Services</h3>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-2 pt-2 border-t border-brand-dark/10 w-full">
+                        <span class="bg-white px-3 py-1.5 rounded-full text-xs font-bold text-brand-dark shadow-sm">Delivery</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-xs font-bold text-brand-dark shadow-sm">Reservations</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-xs font-bold text-brand-dark shadow-sm">Online Booking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <img src="1000084671_a8388b.jpg" alt="Kaye Crumbs Logo" class="h-16 w-16 mx-auto rounded-full object-cover bg-white p-1 border border-white/20" onerror="this.onerror=null; this.style.display='none';">
+            <div class="space-y-1">
+                <h3 class="font-heading text-2xl font-bold">Kaye Crumbs</h3>
+                <p class="text-xs text-brand-cream/70">goodness in every bite</p>
+            </div>
+            <div class="flex justify-center pt-2">
+                <a href="https://www.facebook.com/share/1E4X9dduT8/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#1877F2] transition-colors text-lg" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+            <p class="text-xs text-brand-cream/50 pt-4 border-t border-white/10 max-w-sm mx-auto">&copy; 2026 Kaye Crumbs Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuItems = [
+            { id: 1, name: "Chocolate Classic", price: "₱40", image: "1000084664_a83967.jpg" },
+            { id: 2, name: "Cookies n Cream", price: "₱40", image: "1000084663_a83967.jpg" },
+            { id: 3, name: "Matcha", price: "₱40", image: "1000084665_a83967.jpg" },
+            { id: 4, name: "Cinnastional", price: "₱40", image: "1000084667_a83967.jpg" },
+            { id: 5, name: "Fudgy Brownie", price: "₱40", image: "1000084668_a83966.jpg" },
+            { id: 6, name: "Red Velvet", price: "₱45", image: "1000084669_a83966.jpg" },
+            { id: 7, name: "Choco Trio", price: "₱50", image: "1000084670_a83966.jpg" }
+        ];
+
+        function renderMenu() {
+            const container = document.getElementById('menu-grid');
+            container.innerHTML = menuItems.map(item => `
+                <div class="bg-brand-card rounded-3xl p-6 border border-[#E8DCCF] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="bg-brand-cream rounded-2xl p-4 flex items-center justify-center border border-brand-dark/5 h-64 overflow-hidden">
+                            <img src="${item.image}" alt="${item.name}" class="h-full w-full object-contain hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/300x300/3B1E18/FFFFFF?text=${encodeURIComponent(item.name)}';">
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-brand-dark leading-tight">${item.name}</h3>
+                    </div>
+                    <div class="pt-4 border-t border-brand-dark/10 flex items-center justify-between mt-4">
+                        <span class="text-xs text-brand-muted block font-semibold">Price</span>
+                        <span class="font-heading text-2xl font-bold text-brand-accent">${item.price}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.onload = renderMenu;
+    </script>
+</body>
+</html>
