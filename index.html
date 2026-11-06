@@ -39,6 +39,43 @@
 </head>
 <body class="bg-brand-cream text-brand-dark font-body antialiased min-h-screen flex flex-col">
 
+    <!-- Loading Screen Container -->
+    <div id="loader-screen" class="fixed inset-0 z-50 bg-brand-cream flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="relative w-40 h-40 flex items-center justify-center">
+            
+            <!-- Step 1: Logo (IMG_20261105_211251.jpg) -->
+            <div id="loader-logo" class="absolute inset-0 flex items-center justify-center transition-all duration-500 transform scale-100 opacity-100">
+                <img src="IMG_20261105_211251.jpg" alt="Kaye Crumbs Logo" class="h-28 w-28 object-cover rounded-full shadow-lg border-2 border-brand-accent animate-pulse" onerror="this.onerror=null; this.src='https://placehold.co/150x150/3B1E18/FFFFFF?text=KC';">
+            </div>
+
+            <!-- Step 2: Cookie Icon -->
+            <div id="loader-cookie" class="absolute inset-0 flex items-center justify-center transition-all duration-500 transform scale-50 opacity-0 pointer-events-none">
+                <div class="w-28 h-28 bg-[#C68B59] rounded-full flex items-center justify-center shadow-lg relative border-4 border-[#8B5A2B] animate-bounce">
+                    <i class="fa-solid fa-cookie text-5xl text-[#5C3A21]"></i>
+                </div>
+            </div>
+
+            <!-- Step 3: Brownie Icon -->
+            <div id="loader-brownie" class="absolute inset-0 flex items-center justify-center transition-all duration-500 transform scale-50 opacity-0 pointer-events-none">
+                <div class="w-28 h-28 bg-[#3B1E18] rounded-2xl flex items-center justify-center shadow-lg relative border-4 border-[#5A3127] animate-pulse">
+                    <i class="fa-solid fa-stroopwafel text-5xl text-amber-600"></i>
+                </div>
+            </div>
+
+            <!-- Step 4: Cake Icon -->
+            <div id="loader-cake" class="absolute inset-0 flex items-center justify-center transition-all duration-500 transform scale-50 opacity-0 pointer-events-none">
+                <div class="w-28 h-28 bg-[#E8C5C8] rounded-full flex items-center justify-center shadow-lg relative border-4 border-[#8B2626] animate-bounce">
+                    <i class="fa-solid fa-cake-candles text-5xl text-brand-accent"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-6 text-center">
+            <p id="loader-text" class="font-heading text-xl font-bold text-brand-dark tracking-wide">goodness in every bite</p>
+        </div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="bg-brand-cream/90 backdrop-blur-md sticky top-0 z-40 border-b border-[#E8DCCF]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -202,7 +239,60 @@
             `).join('');
         }
 
-        window.onload = renderMenu;
+        function runLoaderSequence() {
+            const logo = document.getElementById('loader-logo');
+            const cookie = document.getElementById('loader-cookie');
+            const brownie = document.getElementById('loader-brownie');
+            const cake = document.getElementById('loader-cake');
+            const text = document.getElementById('loader-text');
+            const loaderScreen = document.getElementById('loader-screen');
+
+            // Phase 0: Start with Logo image & text "goodness in every bite"
+            text.textContent = 'goodness in every bite';
+
+            // Phase 1: Logo (IMG_20261105_211251.jpg) -> Cookie (after 1 second)
+            setTimeout(() => {
+                logo.classList.replace('scale-100', 'scale-50');
+                logo.classList.replace('opacity-100', 'opacity-0');
+                
+                cookie.classList.replace('scale-50', 'scale-100');
+                cookie.classList.replace('opacity-0', 'opacity-100');
+                text.textContent = 'cookie';
+            }, 1000);
+
+            // Phase 2: Cookie -> Brownie (after 2 seconds)
+            setTimeout(() => {
+                cookie.classList.replace('scale-100', 'scale-50');
+                cookie.classList.replace('opacity-100', 'opacity-0');
+
+                brownie.classList.replace('scale-50', 'scale-100');
+                brownie.classList.replace('opacity-0', 'opacity-100');
+                text.textContent = 'brownie';
+            }, 2000);
+
+            // Phase 3: Brownie -> Cake (after 3 seconds)
+            setTimeout(() => {
+                brownie.classList.replace('scale-100', 'scale-50');
+                brownie.classList.replace('opacity-100', 'opacity-0');
+
+                cake.classList.replace('scale-50', 'scale-100');
+                cake.classList.replace('opacity-0', 'opacity-100');
+                text.textContent = 'cake';
+            }, 3000);
+
+            // Phase 4: Fade out screen (after 4 seconds)
+            setTimeout(() => {
+                loaderScreen.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    loaderScreen.style.display = 'none';
+                }, 700);
+            }, 4000);
+        }
+
+        window.onload = () => {
+            renderMenu();
+            runLoaderSequence();
+        };
     </script>
 </body>
-                                </html>
+            </html>
